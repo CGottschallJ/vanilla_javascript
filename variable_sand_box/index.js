@@ -83,6 +83,3 @@ person.name = "Cameron";
 
 //Logging the mutated variable object to the console.
 console.log("mutated name person", person);
-
-
-
