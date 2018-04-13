@@ -264,7 +264,7 @@ let value;
 
         //Converting the string value to a number that displays just one decimal place rather than three.
 
-        value = parseFloat("999.555");
-        console.log("value toFixed() - ", value.toFixed(1));
+        value = parseFloat("999.555"); 
+        console.log("value toFixed() - ", value.toFixed(1)); // -> 999.6
         
 
