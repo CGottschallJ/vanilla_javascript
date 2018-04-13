@@ -241,8 +241,11 @@ let value;
 
       /*
         The .parseFloat() function can be used to convert strings of numbers to a number with the decimal place included.
+          - This is different from the the .parseInt() function that only returns a whole number.
 
-        - This is different from the the .parseInt() function that only returns a whole number.
+        Finally, the amount of decimal places that are to be included can be determined by using the .toFixed() function.
+          - This function takes in one number as a parameter that will determine the number of decimal places that will be returned.
+          - The number will be rounded up.
 
       */
 
@@ -258,5 +261,10 @@ let value;
         value = parseFloat("999.55");
         console.log("string parseFloat() value - ", value); // 999.55
         console.log("string parseFloat() type - ", typeof value); // -> "number"
+
+        //Converting the string value to a number that displays just one decimal place rather than three.
+
+        value = parseFloat("999.555");
+        console.log("value toFixed() - ", value.toFixed(1));
         
 
