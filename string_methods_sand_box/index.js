@@ -96,7 +96,7 @@
     //.charAt()
       // - The 'character at' method can scan a string and return the character at the index that had been passed in.
       // - This method takes in one argument that is a number.
-        // - If the index is not found in the string, the method will return undefiined.
+        // - If the index is not found in the string, the method will return undefined.
       val = lastName.charAt(0); // -> "G"
       console.log("charAt Method Result - ", val);
 
@@ -117,7 +117,7 @@
     //.slice()
       // - Though slice is commonly used on arrays, it can be used on strings as well and works almost exactly like the substring method.
       // - It too takes in two index numbers as arguments and returns the characters between them.
-        // - Again, remember that the first index passed in will be included and the second index will not be inlcluded.
+        // - Again, remember that the first index passed in will be included and the second index will not be included.
       // - The major difference between the slice and substring method is that the slice and take in a negative number as a single parameter.
         // - If a negative number is passed in, the return will begin counting indexes backwards and return from that index to the end of the string.
       val = lastName.slice(0, 7); // -> "Gottsch"
@@ -144,6 +144,7 @@
       // - This method will either return true or false depending on whether or not the string passed in is included.
       val = str.includes("fun"); // -> true
       console.log("Includes Method Result - ", val);
+
 
 
 
