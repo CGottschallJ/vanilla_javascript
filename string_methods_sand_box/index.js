@@ -1,7 +1,6 @@
 /* String Concatenation and Methods */
 
   //Variables Definition
-
   console.log("! - VARIABLE DEFINITIONS - !");
 
     const firstName = "Cam";
@@ -13,7 +12,6 @@
     console.log("val = ", val);
 
   //Concatenation Section
-
   console.log("! - CONCATENATION SECTION - !");
     //Addition Operator
       // - One way to add two variables together is with the math operator.
