@@ -10,7 +10,9 @@
 
     //Storing Array In a Variable
       const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const moreNumbers = [10, 11, 12, 13, 14, 15, 16, 17];
       console.log("numbers - ", numbers); // -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      console.log("moreNumbers - ", moreNumbers); // -> [10, 11, 12, 13, 14, 15, 16, 17]
   
     //Array Method & new Keyword
       const cars = new Array("Ford", "Chevy", "Dodge", "Tesla", "General Motors");
@@ -97,17 +99,56 @@
       cars.splice(3, 2);
       console.log("cars.splice(3, 2) return - ", cars); // -> ["Ford", "Chevy", "Dodge"]
 
-
     //.reverse()
       // - The reverse method reverses values in the array so it reads backwards.
       cars.reverse();
       console.log("cars.reverse() return - ", cars);
     
     //.concat()
+      // - The concat method allows us to concatenate two arrays together.
+      // - The concat method takes in one argument which is another array.
+
+      val = numbers.concat(moreNumbers);
+      console.log("numbers.concat(moreNumbers) return - ", val);  // -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 
     //.sort()
+      // - The sort method allows for the ordering of values in an array based on alpha or numeric order. 
+      // - This function can take in one argument which is known as a compare function.
+          // - If no callback is passed in, each value in the array is converted to a string and sorted.
+          // - This would not work for numbers as they would then be sorted by the first number.
+          // - This means that 111 would come before 2.
+      // - For numbers, the compare function can be used to assist with sorting
+        // - This can be acheived by simply subtracting b from a (a - b);
 
-    //.
+      //sorting strings
+      val = cars.sort();
+      console.log("cars.sort() return - ", val);
+
+      //sorting numbers
+      val = numbers.sort(function(a, b){
+        return a - b
+      });
+      console.log("numerical sort return - ", numbers);
+
+      //reverse sort
+      val = numbers.sort(function(a, b) {
+        return b - a;
+      })
+      console.log("reverse numerical sort return - ", numbers);
+
+    //.find()
+      // - The find method allows us to find the first instance of a value that meets the conditional statement.
+      // - The find method can take in one argument which is a simple function.
+
+      function over15(number) {
+        return number > 15;
+      }
+
+      val = moreNumbers.find(over15);
+      console.log("moreNumbers.find(over15) return - ", val);
+
+      
+      
 
 
 
