@@ -75,28 +75,33 @@
 
     //.unshift()
       // - The unshift method allows values to be added to the beginning of an array.
-
       cars.unshift("Honda");
       console.log("cars.unshift(\"Honda\") return - ", cars); // -> ["Honda", "Ford", "Chevy", "Dodge", "Tesla", "General Motors", "BMW"]
     
     //.pop()
       // - The pop method allows a value to removed from the end of an array.
+      cars.pop();
+      console.log("cars.pop() return - ", cars); // -> ["Honda", "Ford", "Chevy", "Dodge", "Tesla", "General Motors"]
 
     //.shift()
       // - The shift method allows a value to be removed from the front of an array.
+      cars.shift();
+      console.log("cars.shift() return - ", cars);
 
     //.splice()
       // - The splice method allows for the removal of one or more values from an array.
       // - This method takes in 2 parameters.
         // - The index you'd like to begin the cut at.
-        // - The index you'd like to end the cut at.
+        // - The number of values that you would like to remove from that array.
       // - The first parameter will be included in the cut and the second will not.
+      cars.splice(3, 2);
+      console.log("cars.splice(3, 2) return - ", cars); // -> ["Ford", "Chevy", "Dodge"]
 
-      // numbers.splice(0, 2);
-      // console.log(numbers);
 
     //.reverse()
       // - The reverse method reverses values in the array so it reads backwards.
+      cars.reverse();
+      console.log("cars.reverse() return - ", cars);
     
     //.concat()
 
