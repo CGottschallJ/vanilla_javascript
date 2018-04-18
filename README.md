@@ -1,2 +1,2 @@
 # vanilla_javascript
-This repository contains code written in vanilla javascript.  Understanding the basics of javascript without the use of frameworks
+This vanilla_javaScript Repository demonstrates in depth understanding of vanilla javaScript functions, structure, syntax, and concepts.
