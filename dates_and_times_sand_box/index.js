@@ -10,7 +10,7 @@ console.log("! - Variable Declaration Section - !")
   const today = new Date();
   console.log("today - ", today); // -> Thu Apr 19 2018 15:42:40 GMT-0500 (CDT);
 
-  const birthday = new Date();
+  const birthday = new Date("1-1-0000 00:00:00");
   console.log("birthday - ", birthday);
 
   let val;
@@ -72,18 +72,39 @@ console.log("! - Accessing Data Section - !");
 console.log("! - Date Object Mutation Section - !");
 
   //setMonth()
-    // - The 
+    // - The setMonth() method allows for the mutation of the month value with the date object.
+      // - This method takes in one argument that is a number of the month you'd like the date to be.
+      // - Remember, the array of months is 0 based which makes a 0 passed in January.
+    birthday.setMonth(3);
+    console.log("birthday.setMonth(3) return - ", birthday);  // -> Apr
 
   //setDate()
-
-  //setDay()
+    // - The setDate() method allows for the mutation of the date (date of month) value with the date object.
+      // - This method takes in one argument that is a number of the date of month you'd like the date to be.
+    birthday.setDate(26);
+    console.log("birthday.setDate(26) return - ", birthday); // -> 26
 
   //setFullYear()
+    // - The setDate() method allows for the mutation of the date (date of month) value with the date object.
+      // - This method takes in one argument that is a number of the date of month you'd like the date to be.
+    birthday.setFullYear(1990);
+    console.log("birthday.setFullYear(1990) - ", birthday);
 
   //setHours()
+    // - The setHours() method allows for the mutation of the (hour of day) value with the date object.
+      // - This method takes in one argument that is a number of the hour of day you'd like the date to be.
+    birthday.setHours(23);
+    console.log("birthday.setHours(23) - ", birthday);
 
   //setMinutes()
+    // - The setMinutes() method allows for the mutation of the minute (minute of hour) value with the date object.
+      // - This method takes in one argument that is a number of the minute of the hour you'd like the date to be.
+      birthday.setMinutes(30);
+      console.log("birthday.setMinutes(30) - ", birthday);
 
-  //setSeconds()
-
+  //setSeconds() 
+    // - The setSeconds() method allows for the mutation of the second (second of minute) value with the date object.
+      // - This method takes in one argument that is a number of the second of the minute you'd like the date to be.
+      birthday.setSeconds(45);
+      console.log("birthday.setSeconds(45) - ", birthday);
 
