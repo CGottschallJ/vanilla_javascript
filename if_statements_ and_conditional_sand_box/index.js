@@ -116,7 +116,25 @@
         }
         console.log("if(numTwo >= 99) - ", val);
 
+    //Logical Operators can be used when two or more conditionals need to be met in the same expression.
+      // - && - The double ampersand can be used to indicate 'and' when two conditionals MUST be met.
+        if(nameOne === "Cameron" && numTwo === 100) {
+          val = 'Both conditionals have been met!';
+        } else {
+          val = 'Both conditionals were NOT met.';
+        }
+        console.log("if(nameOne === \"Cameron\" && numTwo === 100) - ", val);
+
+      // - || - The double pipe can be used to indicate 'or' when one of two or more conditionals MUST be met.
+        if(nameOne === "Cameron" || numTwo === 100) {
+          val = 'One of the conditionals has been met!';
+        } else {
+          val = 'Neither conditional was NOT met.';
+        }
+        console.log("if(nameOne === \"Cameron\" || numTwo === 100) - ", val);
+
   //Else If Statements
+  console.log("! - Else If Statements - !");
     // - Else If statements can be used in the case that multpile conditions need to be tested.
     // - This syntax is the same as the If/Else statement except for the addition of the else if conditionlap placed in between.
       if(nameOne === nameTwo) {
@@ -127,6 +145,15 @@
         val = "None of the conditionals were met";
       }
       console.log("else if(numOne !== numTwo) - ", val);
+
+  //Ternary Operator
+  console.log("! - Ternary Operator Section - !");
+      // - The ternary operator allows for a shorthand way of writing if/else statements.
+      // - This can be done using the question mark (?) meaning 'if' and a colon (:) meaning 'else';
+        console.log("Ternary True return - ");
+        console.log(nameOne === "Cameron" ? `The nameOne variable is equal to ${nameOne}` : `Did you mean ${nameTwo}?`);
+        console.log("Ternary False return - ");
+        console.log(nameOne === "Cam" ? `The nameOne variable is equal to ${nameOne}` : `Did you mean ${nameTwo}?`);
 
 
     
