@@ -146,6 +146,15 @@
       }
       console.log("else if(numOne !== numTwo) - ", val);
 
+  //Ternary Operator
+  console.log("! - Ternary Operator Section - !");
+      // - The ternary operator allows for a shorthand way of writing if/else statements.
+      // - This can be done using the question mark (?) meaning 'if' and a colon (:) meaning 'else';
+        console.log("Ternary True return - ");
+        console.log(nameOne === "Cameron" ? `The nameOne variable is equal to ${nameOne}` : `Did you mean ${nameTwo}?`);
+        console.log("Ternary False return - ");
+        console.log(nameOne === "Cam" ? `The nameOne variable is equal to ${nameOne}` : `Did you mean ${nameTwo}?`);
+
 
     
 
