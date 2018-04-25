@@ -14,7 +14,7 @@
       return "Hello";
     }
 
-    console.log(greeting()); // -> Hello
+    console.log("greeting() return - ", greeting()); // -> Hello
 
     //Single Parameter
       // - In some cases, one or more parameters can be passed into the parentheses after the function name.
@@ -26,7 +26,7 @@
 
       // - When the function is called, a value can be placed in the parentheses to represent each parameter.
     
-      console.log(greetingWithName("Cam")); // -> Hello, Cam
+      console.log("greetingWithName(firstName) return - ", greetingWithName("Cam")); // -> Hello, Cam
 
     //Multiple Parameters
 
@@ -34,7 +34,7 @@
         return `Hello, ${firstName} ${lastName}`
       }
 
-      console.log(greetingWithLastName("Cam", "Gottschall")); // -> Hello, Cam Gottschall
+      console.log("greetingWithLastName() return - ", greetingWithLastName("Cam", "Gottschall")); // -> Hello, Cam Gottschall
 
 
     //Setting Default Values
@@ -53,11 +53,11 @@
           return `Hello, ${firstName} ${lastName}`
         }
 
-        console.log(testAndGreet());
+        console.log("testAndGreet() return - ", testAndGreet()); // -> Hello, John Doe
 
-        console.log(testAndGreet("Cam"));
+        console.log("testAndGreet(\"Cam\") return - ", testAndGreet("Cam")); // -> Hello, Cam Doe
         
-        console.log(testAndGreet("Cam", "Gottschall"));
+        console.log("testAndGreet(\"Cam\", \"Gottschall\") return - ", testAndGreet("Cam", "Gottschall")); // -> Hello, Cam Gottschall
 
       // - In EcmaScript6 (ES6), the default values can be defined inside the parentheses when the parameter is passed in.
 
@@ -65,11 +65,11 @@
         return `Hello, ${firstName} ${lastName}`
       }
 
-      console.log(testAndGreet());
+      console.log(testAndGreet()); // -> Hello, John Doe
 
-      console.log(testAndGreet("Cam"));
+      console.log(testAndGreet("Cam")); // -> Hello, Cam Doe
       
-      console.log(testAndGreet("Cam", "Gottschall"));
+      console.log(testAndGreet("Cam", "Gottschall")); // -> Hello, Cam Gottschall
 
   //Function Expressions
     // - Functions can also be saved as a value of a  variable. These are called function expressions. 
@@ -80,7 +80,7 @@
         return x * x;
       };
 
-      console.log(square(9)); // -> 81
+      console.log("square(9) return - ", square(9)); // -> 81
 
   //Immediately Invoked Functions - IIFEs
     // - An immediately invoked function is a function that runs at the same time it is declared
@@ -88,7 +88,7 @@
     // - A set of parentheses is still required after the delcararion to call the function as well.
       (function(){
         console.log('Immediately Ran...');
-      })();
+      })(); // -> Immediately Ran... 
 
     // - Immediately Invoked Functions can also take in parameters.
 
@@ -109,7 +109,7 @@
       }
     };
 
-    console.log(basicEquations.add(9)); // -> 10
+    console.log("basicEquations.add(9) return - ", basicEquations.add(9)); // -> 10
 
     //Methods can also be added to an object later on
 
@@ -117,4 +117,4 @@
       return x - 1
     };
 
-    console.log(basicEquations.subtract(9)); // -> 8
+    console.log("basicEquations.subtract(9) return - ", basicEquations.subtract(9)); // -> 8
