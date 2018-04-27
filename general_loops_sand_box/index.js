@@ -161,6 +161,7 @@
       // - A variable is then declared which will represent the keys in the object.
       // - Next, we use the 'in' keyword to instruct which object to look in.
       // - Finally, we build the code block of instructions.
+      console.log(" - Accessing the object keys - ");
 
         const user = {
           firstName: "Cam",
@@ -169,13 +170,14 @@
         }
 
         for(let x in user) {
-          console.log(x);
+          console.log("console.log(x) return - ", x);
         }
 
     // - To access the values, the bracket syntax can be used.
+      console.log(" - Accessing the object values - ");
 
         for(let x in user) {
-          console.log(`${x} : ${user[x]}`);
+          console.log("console.log(`${user[x]}`) return - ", `${user[x]}`);
         }
 
 
