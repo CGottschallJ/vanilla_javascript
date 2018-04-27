@@ -151,6 +151,31 @@
           return user.name;
         })
         console.log("users.map return - ", names);
-        
+
     //For In Loop
+    console.log(" - For In Loop - ");
+      
+    // - The For/In loop is commonly used with objects.
+    // - It allows us to access the keys and values within the object.
+    // - The syntax begins like a for loop
+      // - A variable is then declared which will represent the keys in the object.
+      // - Next, we use the 'in' keyword to instruct which object to look in.
+      // - Finally, we build the code block of instructions.
+
+        const user = {
+          firstName: "Cam",
+          lastName: "Gottschall",
+          age: 28
+        }
+
+        for(let x in user) {
+          console.log(x);
+        }
+
+    // - To access the values, the bracket syntax can be used.
+
+        for(let x in user) {
+          console.log(`${x} : ${user[x]}`);
+        }
+
 
