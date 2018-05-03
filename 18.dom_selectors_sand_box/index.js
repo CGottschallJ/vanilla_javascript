@@ -84,10 +84,8 @@
         document.querySelector('li:nth-child(4)').textContent = "Fourth Item";
 
         // - Remember that this does not work with :nth-child(even) or (odd) as this selector is only a single element selector.
+
         
-
-
-
   //Multiple Element Selectors
     // - Multiple Element Selectors can be used to select numerous elements from the DOM.
     // - These methods will return an HTML collection or a node collection depending on the method used.
