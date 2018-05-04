@@ -84,11 +84,56 @@
         document.querySelector('li:nth-child(4)').textContent = "Fourth Item";
 
         // - Remember that this does not work with :nth-child(even) or (odd) as this selector is only a single element selector.
+          // - This too will only select the first element in the HTML collection.
 
-        
+
   //Multiple Element Selectors
     // - Multiple Element Selectors can be used to select numerous elements from the DOM.
     // - These methods will return an HTML collection or a node collection depending on the method used.
       // - Remember that collections must be converted into arrays to use array methods.
     // - There are a numerous methods to acheive this as well
       // - Multiple elements can be selected by class name, tag name, etc.
+
+    //getElementsByClassName() Method
+      // - The getElementsByClassName method can be used to retrieve am HTML collection of elements by their class attribute.
+      // - These will be returned in an HTML collection which will store each element in an individual index.
+        // - Though these are stored with index, array methods cannot be used on them.
+        // - Each index contains numerous properties pertaining to just that element.
+    
+        const listItems = document.getElementsByClassName('collection-item');
+        console.log(listItems);
+      
+      // - Each index of the HTML collection can be accessed using the bracket syntax.
+
+        console.log("HTML collection second index - ", listItems[1]);
+
+        // or...
+
+        const firstItem = document.getElementsByClassName('collection-item')[0];
+        console.log("HTML collection first index - ", firstItem);
+
+      // - Elements can also be styled by selecting the elements with this syntax as well.
+
+        listItems[0].style.background = 'yellow';
+      
+      // - Remember that styling can only be applied to one element at a time unless the HTML collection is converted into an array.
+
+        const itemsArray = Array.from(listItems);
+
+        itemsArray.forEach(function(item) {
+          item.style.background = 'lightgray';
+        });
+
+
+      // - It is also possible to access an individual or group of elements within a another element without selecting all elements globally.
+        // - This can be done by selecting the parent element and, then using dot syntax, selecting the class you'd like.
+
+        const buttons = document.getElementsByClassName('btn');
+
+        const firstButton = document.querySelector('.card-content').getElementsByClassName('btn');
+
+        console.log("All buttons on page - ", buttons);
+
+        console.log("First button on page - ", firstButton);
+
+  //getElementsByTagName() Method
