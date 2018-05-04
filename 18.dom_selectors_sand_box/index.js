@@ -136,27 +136,45 @@
 
         console.log("First button on page - ", firstButton);
 
-  //getElementsByTagName() Method
-
-    // - Elements can also be retrieved by the tag name of the element (i.e. div, form, ul, etc).
-    // - This too will return an HTML collection of every tag on the page with that tag name.
-    // - The same rules apply as the getElementsByClass method
-      // - Though these are stored with index, array methods cannot be used on them.
-      // - Each index contains numerous properties pertaining to just that element.
+    //getElementsByTagName() Method
+      // - Elements can also be retrieved by the tag name of the element (i.e. div, form, ul, etc).
+      // - This too will return an HTML collection of every tag on the page with that tag name.
+      // - The same rules apply as the getElementsByClass method
+        // - Though these are stored with index, array methods cannot be used on them.
+        // - Each index contains numerous properties pertaining to just that element.
 
         const pageInputs = document.getElementsByTagName('input');
 
         console.log("document.getElementsByTagName('input') - ", pageInputs);
 
-    // - Remember that we must convert an HTML collection into an array using Array.from() in order to mutate or style all tags at the same time.
-    
-    // - It is possible to select a single element rather than all global elements by selecting the parent element and then the child element.
+      // - Remember that we must convert an HTML collection into an array using Array.from() in order to mutate or style all tags at the same time.
+
+      // - It is possible to select a single element rather than all global elements by selecting the parent element and then the child element.
       
         const taskInput = document.querySelector('#task-form').getElementsByTagName('input');
 
         console.log("document.querySelector('#task-form').getElementsByTagName('input') - ", taskInput);
     
-    // - This can be used to style a single element as well.
-      // - Remember to specify which index using bracket syntax.
+      // - This can be used to style a single element as well.
+        // - Remember to specify which index using bracket syntax.
+
         taskInput[0].style.color = 'purple';
-  
+
+  //querySelectorAll() Method
+    // - The most powerful option to select multiple elements from the DOM is the querySelectorAll() method.
+    // - This method should be used for a number of reasons.
+      // - The first is that any CSS selector can be passed in, much like jQuery.
+      // - Another major reason is that it returns an Node List rather than HTML collection.
+        // - A node list allows us to use array methods (forEach, map) without converting to an Array.
+      
+        const queryAllList = document.querySelectorAll('ul.collection li.collection-item');
+
+        console.log(queryAllList); // -> NodeList
+      
+      // - This allows us to more easily manipulate and style the elements with a loop and array methods.
+
+        const oddListItems = document.querySelectorAll("li.collection-item:nth-child(odd)");
+
+        oddListItems.forEach(function(item) {
+          item.style.background = "grey";
+        });
