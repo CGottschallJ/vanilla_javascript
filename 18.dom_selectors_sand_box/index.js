@@ -137,3 +137,26 @@
         console.log("First button on page - ", firstButton);
 
   //getElementsByTagName() Method
+
+    // - Elements can also be retrieved by the tag name of the element (i.e. div, form, ul, etc).
+    // - This too will return an HTML collection of every tag on the page with that tag name.
+    // - The same rules apply as the getElementsByClass method
+      // - Though these are stored with index, array methods cannot be used on them.
+      // - Each index contains numerous properties pertaining to just that element.
+
+        const pageInputs = document.getElementsByTagName('input');
+
+        console.log("document.getElementsByTagName('input') - ", pageInputs);
+
+    // - Remember that we must convert an HTML collection into an array using Array.from() in order to mutate or style all tags at the same time.
+    
+    // - It is possible to select a single element rather than all global elements by selecting the parent element and then the child element.
+      
+        const taskInput = document.querySelector('#task-form').getElementsByTagName('input');
+
+        console.log("document.querySelector('#task-form').getElementsByTagName('input') - ", taskInput);
+    
+    // - This can be used to style a single element as well.
+      // - Remember to specify which index using bracket syntax.
+        taskInput[0].style.color = 'purple';
+  
