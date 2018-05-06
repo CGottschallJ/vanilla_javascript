@@ -13,10 +13,11 @@
         const list = document.querySelector('ul.collection');
         const listItem = document.querySelector('li.collection-item:first-child');
 
-        console.log(list);
-        console.log(listItem);
+        console.log("list - ", list);
+        console.log("listItem - ", listItem);
 
-  // Properties
+  //Children Properties
+  console.log("! - Children Property Section - !");
 
     // - Each node in the DOM contains properties identical to one another.
       // - Some of these properties can be used to access elements related to the selected element.
@@ -82,8 +83,8 @@
       // - The firstElementChild Property can be used to access the first element within the selected element.
       // - This will return an HTML collection which does not include text nodes, only elements.
 
-      val = list.firstElementChild;
-      console.log("list.firstElementChild - ", val);
+        val = list.firstElementChild;
+        console.log("list.firstElementChild - ", val);
 
     //lastChild Property
       // - The last child property can be used to access the last child node of the element.
@@ -109,22 +110,95 @@
         console.log("list.childElementCount - ", val);
 
 
-    //Accessing Grand Children
-      // - An elements grand children can be accessed by stacking the children property with dot syntax
-        // - This will return an HTML collection of the grandchild elements.
-      // - Remember that you must specify the child using bracket syntax before you can access the grandchildren.
-      
+  //Accessing Grand Children
+  console.log("! - Grand Children Property Section - !");
+
+    // - An elements grand children can be accessed by stacking the children property with dot syntax
+      // - This will return an HTML collection of the grandchild elements.
+    // - Remember that you must specify the child using bracket syntax before you can access the grandchildren.
+    
         val = list.children[0].children;
         console.log("list.children[0].children - ", val);
 
-      // - We can then access an individual element from there using bracket syntax again.
+    // - We can then access an individual element from there using bracket syntax again.
 
         val = list.children[0].children[0];
         console.log("list.children[0].children[0] - ", val);
 
-      // - We can also use this property to style.
+    // - We can also use this property to style.
 
-      list.children[0].children[0].style.color = 'yellow';
+        list.children[0].children[0].style.color = 'yellow';
 
-  //
+  //Parent Properties
+  console.log("! - Parent Property Section - !");
+    // - Just like accessing child elements, we can access parents elements using the dot syntax.
+
+    //parentNode Property
+      // - The parent node property allows us to access the parent element of the selected element.
+      // - Unlike the childNode property, this property returns an element rather than a nodeList
+
+        val = listItem.parentNode;
+        console.log("listItem.parentNode - ", val);
+
+    //parentElement Property
+      // - The parentElement property allows us to access the parent element as well.
+      // - This property will return a single element rather than a HTML collection.
+
+        val = listItem.parentElement;
+        console.log("listItem.parentElement - ", val);
+  
+  //Accessing Grand Parents
+    // - Just like grand children, grand parent elements can be accessed by stacking the parentElement property using dot syntax.
+      // - The difference is that we do not have to specify which parent using the bracket syntax.
+    // - This will return the element that is two levels above the selected element.
+
+        val = listItem.parentElement.parentElement;
+        console.log("listItem.parentElement.parentElement - ", val);
+      
+  //Sibling Element Properties
+    // - Accessing siblings can be accomplished using the dot syntax.
+    
+    //nextSibling Property
+      // - The nextSibling property can be used to access the first node following that element within the same parent element.
+
+        val = listItem.nextSibling;
+        console.log("listItem.nextSibling - ", val);
+
+    //nextElementSibling Property
+      // - The nextElementSibling property can be used to access the first element following that element within the same parent element.
+        
+        val = listItem.nextElementSibling;
+        console.log("listItem.nextElementSibling - ", val);
+
+      // - This property can also be stacked using dot syntax to access siblings further down the page.
+
+        listItem.nextElementSibling.nextElementSibling.style.background = "lightgreen";
+
+    //previousSibling Property
+
+      // - The previousSibling property can be used to access the first node prior to the selected element within the same parent element.
+
+        val = list.lastElementChild.previousSibling;
+        console.log("list.lastElementChild.previousSibling - ", val);
+
+      // - Remember this will return a node which will be a text node if there is a line break in between them.
+      
+
+    //previousElementSibling Property
+      // - The previousElementSibling property can be used to access the first element prior to the selected element within the same parent element.
+          
+        val = list.lastElementChild.previousElementSibling;
+        console.log("list.lastElementChild.previousElementSibling - ", val);
+        list.lastElementChild.previousElementSibling.style.background = 'pink';
+
+      // - This property can also be stacked using dot syntax to access siblings further down the page.
+
+      list.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.background = "lightyellow";
+    
+
+
+  
+  
+
+  
 
