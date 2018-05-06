@@ -70,9 +70,38 @@
         list.children[0].style.background = 'lightblue';
     
     //firstChild Property
+      // - The first child property can be used to access the first child node of the element.
 
+        val = list.firstChild;
+        console.log("list.firstChild - ", val);
+
+      // - Since this returns a nodeList, text nodes will be included.
+      // - To avoid this issue, the firstElementChild can be used.
+
+    //firstElementChild Property
+      // - The firstElementChild Property can be used to access the first element within the selected element.
+      // - This will return an HTML collection which does not include text nodes, only elements.
+
+      val = list.firstElementChild;
+      console.log("list.firstElementChild - ", val);
 
     //lastChild Property
+      // - The last child property can be used to access the last child node of the element.
+
+        val = list.lastChild;
+        console.log("list.lastChild - ", val);
+
+      // - Since this returns a nodeList, text nodes will be included.
+      // - To avoid this issue, the lastElementChild can be used.
+
+    //lastElementChild Property
+      // - The lastElementChild Property can be used to access the last element within the selected element.
+      // - This will return an HTML collection which does not include text nodes, only elements.
+
+      val = list.lastElementChild;
+      console.log("list.lastElementChild - ", val);
+
+
 
     //Accessing Grand Children
       // - An elements grand children can be accessed by stacking the children property with dot syntax
