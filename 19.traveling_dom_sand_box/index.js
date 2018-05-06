@@ -98,9 +98,15 @@
       // - The lastElementChild Property can be used to access the last element within the selected element.
       // - This will return an HTML collection which does not include text nodes, only elements.
 
-      val = list.lastElementChild;
-      console.log("list.lastElementChild - ", val);
+        val = list.lastElementChild;
+        console.log("list.lastElementChild - ", val);
 
+    //childElementCount
+      // - Other properties can be used to access information about the children of a selected element.
+      // - the childElementCount can be used to return a number of how many child elements a selected element has.
+
+        val = list.childElementCount;
+        console.log("list.childElementCount - ", val);
 
 
     //Accessing Grand Children
