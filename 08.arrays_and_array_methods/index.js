@@ -29,7 +29,7 @@
   console.log("! - Accessing Data - !");
     // - Each index of an array can be accessed individually using bracket syntax.
     // - To access a certain index, that index can be placed in square brackets after the variable name.
-
+ 
     val = mixedData[1];
     console.log("Accessing mixedData[1] return - ", val); // -> "hello"
 
