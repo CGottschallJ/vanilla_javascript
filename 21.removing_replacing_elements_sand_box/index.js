@@ -86,7 +86,7 @@
         // - The method takes in one argument-- a string of what class you'd like removed from the element.
 
         deleteLink.classList.remove("test-class");
-        console.log("deleteLink.classList.add(\"test-class\") - ", val);
+        console.log("deleteLink.classList.remove(\"test-class\") - ", val);
 
 
       console.log(deleteLink);
