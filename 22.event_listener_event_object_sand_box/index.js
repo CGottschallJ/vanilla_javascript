@@ -73,13 +73,13 @@
 
         e.target.classList.add('red');
 
-          setTimeout(function() {
-            e.target.innerText = "Clear tasks";
+        setTimeout(function() {
+          e.target.innerText = "Clear tasks";
 
-            e.target.classList.remove('red');
+          e.target.classList.remove('red');
 
-            e.target.classList.add('black');
-          }, 1500);
+          e.target.classList.add('black');
+        }, 1500);
       
       //e.type
         // - e.type will return the type of event that occuured as a string
