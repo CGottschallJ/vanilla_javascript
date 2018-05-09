@@ -37,7 +37,7 @@
     console.log("Accessing mixedData[2] return - ", val); // -> 9
 
     // - You can also replace items in an array using this same syntax.
-      // - This is acheived by reassigning that index a new value just like a variable.
+      // - This is achieved by reassigning that index a new value just like a variable.
 
     numbers[9] = 900;
     console.log("replacing numbers[9] return - ", numbers);
@@ -118,7 +118,7 @@
           // - This would not work for numbers as they would then be sorted by the first number.
           // - This means that 111 would come before 2.
       // - For numbers, the compare function can be used to assist with sorting
-        // - This can be acheived by simply subtracting b from a (a - b);
+        // - This can be achieved by simply subtracting b from a (a - b);
 
       //sorting strings
       val = cars.sort();
