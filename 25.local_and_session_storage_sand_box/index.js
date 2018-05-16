@@ -154,7 +154,7 @@
           } else {
             // - if yes, set tasks equal the array found in local storage
             // - JSON.parse can be used to convert the string value back into an array or object.
-            tasks = JSON.parse(localStorage.getItem('tasks'))
+            tasks = JSON.parse(localStorage.getItem('tasks'));
           }
           
           // - We must then push the new value to the array
@@ -168,7 +168,7 @@
 
           localStorage.setItem('tasks', JSON.stringify(tasks));
 
-        })
+        });
       
     // - Since the values in localStorage must be saved as strings, we cannot use array methods on them such as forEach or map.
     // - In order to loop over the array, we must first convert it back into an array.
@@ -180,7 +180,7 @@
         
         tasks.forEach(function(task){
           console.log(task);
-        })
+        });
 
       
 
